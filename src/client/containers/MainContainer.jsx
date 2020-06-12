@@ -20,6 +20,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+  devLogo: {
+    width: "10%",
+  },
+  navContainer: {
+    marginTop: theme.spacing(10),
+  },
   feedContainer: {
     marginTop: theme.spacing(8),
     alignItems: 'center',
@@ -29,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(1),
   },
   logoBox: {
-    flexDirection: 'column',
+    display: 'flex',
+    alignItems: 'center',
   },
   header: {
     display: 'inline',
@@ -39,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline',
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2),
-    fontSize: 15
+    fontSize: 15,
   },
 }));
 
@@ -52,9 +59,7 @@ const MainContainer = (props) => {
       {/* AppBar, where the title of website is, stays on top*/}
       <AppBar position="fixed" className={classes.appBar}>
         <Box className={classes.logoBox}>
-          <Typography variant="h4" align="left" className={classes.header}>
-            {'</DevShark>'}
-          </Typography>
+          <img src="../assets/devshark_logo.png" className={classes.devLogo}></img>
           <Typography variant="inherit" className={classes.subHeader}>
               Developer Resource Aggregator
           </Typography>
@@ -76,7 +81,7 @@ const MainContainer = (props) => {
       {/* Drawer is our sidebar navigation component, stays permanently fixed to side, as docs recommend on desktop usage */}
       <div className={classes.offset}></div>
       <div>
-        <NavContainer />
+        <NavContainer/>
       </div>
       <div className={classes.feedContainer}>
         <FeedContainer/>

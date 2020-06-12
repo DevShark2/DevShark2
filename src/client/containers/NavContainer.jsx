@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   // width of background of drawer
   drawerPaper: {
+    marginTop: theme.spacing(7),
     width: drawerWidth,
   },
   drawerContainer: {
