@@ -102,25 +102,26 @@ const FeedItem = (props) => {
     }
   };
 
-  let displayVideo;
-  switch (props.url.includes('youtube.com/')) {
-    case true:
-      displayVideo = (
-        <div>
-          <iframe
-            width="640"
-            height="360"
-            src={props.url}
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      );
-      break;
-    default:
-      displayVideo = <div></div>;
-  }
+  // let displayVideo;
+  // switch (props.url.includes('youtube.com/')) {
+  //   case true:
+  //     displayVideo = (
+  //       <div>
+  //         <iframe
+  //           width="640"
+  //           height="360"
+  //           src={props.url}
+  //           frameborder="0"
+  //           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  //           allowfullscreen
+  //         ></iframe>
+  //       </div>
+  //     );
+  //     break;
+  //   default:
+  //     displayVideo = <div></div>;
+  // }
+
   const handleCommentsClick = () => {
     props.getComments(props.id);
     toggleCommentsVisible(true);
@@ -184,7 +185,6 @@ const FeedItem = (props) => {
         {/* displays resource description */}
         <Typography variant="body1">{props.description}</Typography>
         {/* COMMENTS BUTTON, THIS WILL GET COMMENTS */}
-        git
         <Button onClick={handleCommentsClick}>
           {commentsVisible ? 'HIDE COMMENTS' : 'GET COMMENTS'}
         </Button>
@@ -213,7 +213,7 @@ const FeedItem = (props) => {
           {displayLikes}
         </div>
       </CardContent>
-      {displayVideo}
+      {/* {displayVideo} */}
     </Card>
   );
 };

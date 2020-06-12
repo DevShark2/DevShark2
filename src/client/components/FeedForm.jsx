@@ -55,11 +55,12 @@ const useStyles = makeStyles((theme) => ({
 
 const mapStateToProps = (state) => ({
   techs: state.topics,
+  user: state.user,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addResource: (resource_obj) => {
-    dispatch(actions.addResource(resource_obj));
+  addResource: (resource_obj, userId) => {
+    dispatch(actions.addResource(resource_obj, userId));
   },
 });
 
@@ -117,7 +118,7 @@ const FeedForm = (props) => {
       let resourceObj = { name, description, url, tech, liked, likes };
       console.log('Sending the following resource to db:');
       console.log(resourceObj);
-      props.addResource(resourceObj);
+      props.addResource(resourceObj, props.user._id);
       setTimeout(() => {
         console.log('Resetting form and closing modal');
         clearForm();

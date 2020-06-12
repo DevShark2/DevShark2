@@ -58,6 +58,7 @@ resourceController.getResourcesSignedIn = (req, res, next) => {
 // Creates a new resource by combining a tech id and the request body info
 resourceController.addResource = (req, res, next) => {
   // get info related to resource from req.body
+  console.log('in resourceController.addResource', resourceController.addResource)
   const { name, description, url, tech } = req.body;
 
   const query = `INSERT INTO resources (name, description, likes, url, tech) 
