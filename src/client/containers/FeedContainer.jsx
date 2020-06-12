@@ -36,8 +36,8 @@ const mapStateToProps = (state) => ({
 // getting resources and upvoting / downvoting a particular resource
 
 const mapDispatchToProps = (dispatch) => ({
-  getResource: (tech_name) => {
-    dispatch(actions.getResource(tech_name));
+  getResources: (tech_name) => {
+    dispatch(actions.getResources(tech_name));
   },
 
   // upvote: (resource_id, resource_tech) => { 

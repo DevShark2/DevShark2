@@ -53,11 +53,13 @@ export const updateTopic = (topic) => {
 
 // Send post request to server to add a new resource
 // Input: resource name in the parameter and resource object to add to DB in body
-export const addResource = (resource) => {
+export const addResource = (resource, userId) => {
+  console.log('inside addResource action.js', addResource)
   return (dispatch) => {
     axios
-      .post(`http://localhost:3000/resource/${resource.name}`, resource)
+      .post(`http://localhost:3000/resource/${userId}/${resource.tech}`, resource)
       .then((response) => {
+        console.log('this is the response to add resouce', response)
         dispatch({
           type: types.ADD_RESOURCE,
           payload: response.data,
