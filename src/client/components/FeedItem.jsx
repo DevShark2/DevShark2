@@ -102,25 +102,26 @@ const FeedItem = (props) => {
     }
   };
 
-  let displayVideo;
-  switch (props.url.includes('youtube.com/')) {
-    case true:
-      displayVideo = (
-        <div>
-          <iframe
-            width="640"
-            height="360"
-            src={props.url}
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      );
-      break;
-    default:
-      displayVideo = <div></div>;
-  }
+  // let displayVideo;
+  // switch (props.url.includes('youtube.com/')) {
+  //   case true:
+  //     displayVideo = (
+  //       <div>
+  //         <iframe
+  //           width="640"
+  //           height="360"
+  //           src={props.url}
+  //           frameborder="0"
+  //           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  //           allowfullscreen
+  //         ></iframe>
+  //       </div>
+  //     );
+  //     break;
+  //   default:
+  //     displayVideo = <div></div>;
+  // }
+
   const handleCommentsClick = () => {
     console.log('in the handle comments function ');
     props.getComments(props.id);
@@ -213,7 +214,7 @@ const FeedItem = (props) => {
           {displayLikes}
         </div>
       </CardContent>
-      {displayVideo}
+      {/* {displayVideo} */}
     </Card>
   );
 };
