@@ -1,4 +1,4 @@
-# Dev-Shark
+# Dev-Shark 2.0
 
 ## Description
 Ever wanted to know the best resource to learn a certain language? Well, now you can! Enter DevShark: a centralized collection of resources shared and approved by the developer community.
