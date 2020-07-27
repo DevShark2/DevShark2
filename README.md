@@ -1,4 +1,4 @@
-# Dev-Shark
+# Dev-Shark 2.0
 
 ## Description
 DevShark: a centralized collection of resources shared and approved by the developer community. Vote and comment on your favorite resources, add a new resource, or find/favorite new resources.
